@@ -1,0 +1,14 @@
+.custom-list-item .MuiListItemButton-root {
+  background-color: inherit;
+  &:hover {
+    background-color: inherit; /* Remove hover background change */
+  }
+}
+
+.custom-list-item .MuiListItemText-primary {
+  font-weight: bold; /* Make primary text bold */
+}
+
+/* .list-item-icon {
+  min-width: 40px;
+} */
