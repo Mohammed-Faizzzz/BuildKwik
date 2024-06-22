@@ -1,12 +1,17 @@
 .custom-list-item .MuiListItemButton-root {
   background-color: inherit;
-  &:hover {
-    background-color: inherit; /* Remove hover background change */
+  &:hover,
+  &:active {
+    background-color: inherit; /* Remove hover and active background change */
   }
 }
 
 .custom-list-item .MuiListItemText-primary {
   font-weight: bold; /* Make primary text bold */
+}
+
+.custom-list-item {
+  border-radius: 1rem;
 }
 
 /* .list-item-icon {

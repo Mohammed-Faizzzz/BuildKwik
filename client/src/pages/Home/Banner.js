@@ -4,24 +4,19 @@ import CustomListItem from './CustomListItem';
 import Box from '@mui/material/Box';
 import Toolbar from '@mui/material/Toolbar';
 import List from '@mui/material/List';
-import SearchIcon from '@mui/icons-material/Search';
 import AccountCircleIcon from '@mui/icons-material/AccountCircle'; // Used if needed
 import LiveHelpIcon from '@mui/icons-material/LiveHelp';
 import { useNavigate } from 'react-router-dom';
 
 const Banner = () => {
-    // const navigate = useNavigate();
+
+    const navigate = useNavigate();
 
     const handleHomeClick = () => {
         console.log('Home clicked');
         navigate('/');
     }
 
-    const handleSearch = () => {
-        console.log('Search clicked');
-    };
-
-    const navigate = useNavigate();
     const handleLoginLogout = () => {
         if (isLoggedIn) {
         // Logic for logging out

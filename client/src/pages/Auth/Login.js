@@ -1,6 +1,4 @@
 import React, { useState } from 'react';
-// import { signInWithEmailAndPassword } from 'firebase/auth';
-// import { auth } from './../firebaseConfig';
 import { useNavigate } from 'react-router-dom';
 import './styles/Login.css';
 import Banner from '../Home/Banner';
@@ -15,10 +13,25 @@ const Login = () => {
   const handleLogin = async (e) => {
     e.preventDefault();
     try {
-      // await signInWithEmailAndPassword(auth, email, password);
-      navigate('/');
+      const response = await fetch('/api/auth', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json'
+        },
+        body: JSON.stringify({ email, password })
+      });
+
+      const data = await response.json();
+
+      if (response.ok) {
+        // Store token in localStorage or a cookie
+        localStorage.setItem('token', data.token);
+        navigate('/');
+      } else {
+        setError(data.msg || 'Login failed');
+      }
     } catch (error) {
-      setError(error.message);
+      setError('Server error');
     }
   };
 

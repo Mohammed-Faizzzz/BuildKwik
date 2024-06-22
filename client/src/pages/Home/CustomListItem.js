@@ -17,7 +17,7 @@ const CustomListItem = ({
 }) => {
   return (
     <>
-      <ListItem disablePadding onClick={onClick} className="custom-list-item">
+      <ListItem onClick={onClick} className="custom-list-item">
         <ListItemButton>
           {/* <ListItemIcon className="list-item-icon">
             <IconComponent/>

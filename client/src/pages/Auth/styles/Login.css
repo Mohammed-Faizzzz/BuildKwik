@@ -17,6 +17,7 @@ html, body {
   background-repeat: no-repeat;
   background-position: center;
   min-height: 100vh;
+  justify-content: space-between;
 }
 
 .Login .form-container {

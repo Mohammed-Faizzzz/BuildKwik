@@ -5,11 +5,11 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
-  width: 90vw;
+  width: 100vw;
   box-sizing: border-box;
   height: 13vh;
   color: black;
-  /* padding: 0 1rem; */
+  padding: 0 1rem;
 }
 
 .banner-content {

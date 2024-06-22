@@ -1,23 +1,34 @@
 /* Light Version */
 .App {
   text-align: center;
+  display: flex;
+  flex-direction: column;
+  background-color: #D3D3D3;
+  background-size: cover;
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+  background-position: center;
+  min-height: 100vh;
+  min-width: 100vw;
+  justify-content: space-between;
+}
+
+.App-body {
+  align-items: center;
+  min-width: 100vw;
 }
 
 .App-header {
-  background-color: #FFFFFF; /* White */
+  background-color: #FFFFFF;
   min-height: 100vh;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
   font-size: calc(10px + 2vmin);
-  color: #000000; /* Black */
-}
-
-.App-footer {
-  justify-content: flex-end; /* Align at the bottom */
+  color: #000000;
 }
 
 .App-link {
-  color: #007BFF; /* Blue */
+  color: #D3D3D3;
 }
