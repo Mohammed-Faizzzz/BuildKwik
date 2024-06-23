@@ -6,11 +6,21 @@ import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import Signup from './pages/Auth/Signup';
 import Login from './pages/Auth/Login';
 
+import HeroSection from './pages/Home/sections/HeroSection';
+import FeaturesSection from './pages/Home/sections/FeaturesSection';
+import PricingSection from './pages/Home/sections/PricingSection';
+import TestimonialsSection from './pages/Home/sections/TestimonialsSection';
+import ContactSection from './pages/Home/sections/ContactSection';
+
 const Home = () => (
   <div className="App">
     <div className="App-body">
       <Banner />
-      <p>Test</p>
+      <HeroSection />
+      <FeaturesSection />
+      <PricingSection />
+      <TestimonialsSection />
+      {/* <ContactSection /> */}
     </div>
     <Footer />
   </div>
