@@ -19,7 +19,7 @@ const Home = () => (
       <HeroSection />
       <FeaturesSection />
       <PricingSection />
-      <TestimonialsSection />
+      {/* <TestimonialsSection /> */}
       {/* <ContactSection /> */}
     </div>
     <Footer />
