@@ -18,9 +18,9 @@ const Signup = () => {
       setError('Passwords do not match');
       return;
     }
-
+  
     try {
-      const response = await fetch('/api/users', {
+      const response = await fetch('http://localhost:5001/api/users', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json'
@@ -31,9 +31,9 @@ const Signup = () => {
           password,
         })
       });
-
+  
       const data = await response.json();
-
+  
       if (response.ok) {
         // Store token in localStorage or a cookie
         localStorage.setItem('token', data.token);
@@ -42,9 +42,10 @@ const Signup = () => {
         setError(data.msg || 'Signup failed');
       }
     } catch (error) {
+      console.error('Error during signup:', error);
       setError('Server error');
     }
-  };
+  };  
 
   return (
     <div className='Signup'>
